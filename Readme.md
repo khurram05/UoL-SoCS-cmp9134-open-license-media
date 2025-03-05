@@ -64,27 +64,41 @@ To run this application, you need to have:
 
 1. Clone the Repository
 
- git clone https://github.com/khurram05/UoL-SoCS-cmp9134-open-license-media.git
+`git clone https://github.com/khurram05/UoL-SoCS-cmp9134-open-license-media.git`
 
 2. Setup Environment Variables
 
-Create a .env file in the root directory with the following values:
+Create a .env file in the backend directory with the following values:
 
 ### Backend
-PORT=8080
 
-Running the Application
+```
+#server port
+PORT = 8080
+
+#Database
+DB_USER = ""
+DB_PASSWORD = ""
+DB_NAME = ""
+DB_HOST = ""
+DB_PORT = ""
+DB_DIALECT = ""
+
+# SECRET KEYS
+SESSION_SECRET = ""
+JWT_SECRET = ""
+```
+
+## Running the Application
 
 ### Backend Setup
 
-cd backend
-npm install
-npm run dev
+`cd backend`
+`npm install`
+`npm run dev`
 
 ### Frontend Setup
 
-cd frontend
-npm install
-npm run dev
-
-
+`cd frontend`
+`npm install`
+`npm run dev`
