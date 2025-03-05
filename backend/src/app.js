@@ -5,7 +5,7 @@ import dbInit from "./db/init.js";
 import Session from "express-session";
 import SequelizeStore from "connect-session-sequelize";
 import sequelize from "./db/config.js";
-
+import allRouter from "./routes/allRouter.js";
 const PORT = process.env.PORT;
 
 const app = express();
@@ -37,6 +37,8 @@ app.use(
     },
   })
 );
+
+app.use("/api", allRouter);
 
 app.listen(PORT, (error) => {
   if (error) {
